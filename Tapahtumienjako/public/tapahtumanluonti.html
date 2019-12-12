@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tapahtumien luonti</title>
+    <link rel="stylesheet" href="css/tapahtumanluonti.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/addImage.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <div class="headerContent">
+            <p class="headerName"><img id="logo" src="img/logo2.png"></p>
+        </div>
+    </div>
+    <nav id="profileNav">
+        <div class="navContent">
+            <!--<a class="navItem" href="tapahtumanluonti.html"><span class="navText">Luo uusi tapahtuma</span></a>-->
+            <!--<a class="navItem" href=""><span class="navText">Haku</span></a>-->
+            <!--<a class="navItem" href="profile.html"><span class="navText">Profiilini</span></a>-->
+            <a class="navIcon" href="etusivu.html"><i class="fas fa-home"></i></a>
+            <a class="navIcon active" href="tapahtumanluonti.html"><i class="fas fa-calendar-plus"></i></a>
+            <a class="navIcon" href="profile.html"><i class="fas fa-user-circle"></i></a>
+            <a class="navIcon" href="kiinnostunut.html"><i class="fas fa-star"></i></a>
+            <a class="navIcon" href="osallistuu.html"><i class="fas fa-calendar-check"></i></a>
+        </div>
+    </nav>
+    <div class="mainContent">
+        <h3>Tapahtuman luonti</h3>
+        <form action="/events" method="post" class="form" enctype="multipart/form-data">
+            <div class="formContent">
+                <div class="imageUpload">
+                     <input class="file" type='file' name="Image" onchange="readURL(this);"  accept="image/*"/>
+                    <div class="inputText">
+                        <h3><i class="fas fa-camera"></i>Valitse kuvatiedosto</h3>
+                    </div>
+                </div>
+                <div class="fileContent">
+                    <img class="fileImage" src="#" alt="your image"/>
+                    <div class="removeButton">
+                        <button type="button" onclick="removeUpload()" class="removeImage">Remove</button>
+                    </div>
+                </div>
+                <label class="label" for="name">Tapahtuman nimi</label>
+                <input id="name" type="text" name="Name" placeholder="Lisää tapahtuman nimi" required>
+                <label class="label" for="date">Päivämäärä</label>
+                <input id="date" type="date" name="StartDate">
+                <label class="label" for="time">Aika</label>
+                <input id="time" type="time" name="StartTime">
+                <label class="label" for="place">Sijainti</label>
+                <select id="place" name="Location">
+                    <option value="helsinki">Helsinki</option>
+                    <option value="espoo">Espoo</option>
+                    <option value="vantaa">Vantaa</option>
+                </select>
+                <label class="label" for="type">Tapahtuman tyyppi</label>
+                <select id="type" name="Owner">
+                    <option value="taide">Taide</option>
+                    <option value="tanssi">Tanssi</option>
+                    <option value="pelit">Pelit</option>
+                    <option value="urheilu">Urheilu</option>
+                </select>
+                <label class="label" for="price">Hinta</label>
+                <input id="price" type="number" name="price" placeholder="Hinta">
+                <label class="label" for="description">Kuvaus</label>
+                <textarea id="description" name="Summary" placeholder="Kuvaile tapahtumaasi"></textarea>
+                <button type="submit">Luo</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>JaaTapahtuma</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<img id="logo" src="img/logo.png">
+<div id="main">
+    <!-- Kirjautumisformi -->
+    <div id="first">
+        <form action="" method="post">
+            <input type="text" name="username" placeholder="Käyttäjänimi">
+            <input type="password" name="password" placeholder="Salasana">
+            <button type="submit">Kirjaudu</button>
+            <p>Eikö sinulla ole käyttäjätunnusta? <a href="#" id="signup">Rekisteröidy</a></p>
+        </form>
+    </div>
+    <!-- Rekisteröitymisformi -->
+    <div id="second">
+        <form action="/users" method="post">
+            <input type="text" name="username" pattern=".{3,}" placeholder="Käyttäjänimi" required>
+            <input type="text" name="email" placeholder="Sähköposti" required>
+            <input type="password" name="password" pattern=".{6,}" placeholder="Salasana" required>
+            <button type="submit">Rekisteröidy</button>
+            <p>Onko sinulla jo käyttäjätunnus? <a href="#" id="signin">Kirjaudu</a></p>
+        </form>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

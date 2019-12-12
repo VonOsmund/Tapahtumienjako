@@ -1,0 +1,158 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    background-color:#eeeff3;
+}
+
+a{
+    text-decoration:none;
+    color:#6495ed;
+}
+
+.content{
+    position: relative;
+}
+
+.events{
+    margin: 16px 0 16px;
+}
+
+.eventHeader{
+    background-size: cover;
+    min-height: 200px;
+    background-position: 50%;
+    border-radius: 5px 5px 0 0;
+}
+
+.eventContent{
+    display: flex;
+    flex-direction: row;
+    min-height: 60px;
+    padding: 5px 10px 10px;
+}
+
+.eventInfo{
+    flex: 1;
+}
+
+.eventButton{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid darkgray;
+    text-align: center;
+    border-radius: .5rem;
+    padding: .3rem;
+    margin: 6px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+.eventButtons{
+    align-self: center;
+}
+
+.eventName{
+    margin: 0;
+}
+
+.eventTime{
+    margin: 0;
+}
+
+.eventDescription{
+    margin: 0;
+}
+
+.eventType{
+    margin: 0;
+}
+
+.eventPrice{
+    margin: 0;
+}
+
+.card{
+    margin: 0 10px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: white;
+}
+
+#mySearch {
+    width: 55%;
+    border: 1px solid #ddd;
+    background-color: white;
+    background-image: url('../img/searchicon.jpg');
+    background-size: 20px 20px;
+    background-position: 8px 4px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border-radius:4px;
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    padding:10px;
+    width: 70%;
+    justify-content: end;
+}
+#hae {
+    background:linear-gradient(to bottom,#22abe9 5%,#36caf0 100%);
+    box-shadow:inset 0 1px 0 0 #7bdcf4;
+    border:1px solid #0F799E;
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    text-shadow:0 1px 0 #13506D;
+    border-radius: 4px;
+    height:30px;
+}
+#hae:hover{
+    background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%);
+}
+#x{
+    background:linear-gradient(to bottom, #e95a23 5%, #f0353d 100%);
+    box-shadow:inset 0 1px 0 0 #f4967f;
+    border:1px solid #9e120c;
+}
+#x:hover{
+    background:linear-gradient(to bottom, #f0353d 5%, #e95a23 100%);
+}
+.hidden {
+    display: none;
+}
+
+.selected{
+    background-color: #4267b2;
+    color: white;
+}
+
+@media (min-width: 900px) {
+    .events{
+        margin: 20px 5%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+    }
+
+    .event.card{
+        box-sizing: border-box;
+        width: 46%;
+    }
+
+    .card{
+        margin: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .events {
+        margin: 20px 15%;
+    }
+}
